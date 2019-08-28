@@ -67,12 +67,17 @@
           "minCount": 3
         }
       },
-      "is_proxysql" : {
-          "true" : {
-              "extraNodesCount": 2
-          }
-      }  
+      "is_proxysql": {
+        "true": {
+          "extraNodesCount": 2
+        }
+      }
     }
+  },
+  "extraNodes": {
+    "nodeType": "proxysql",
+    "count": "${extraNodesCount}",
+    "extip": 1
   },
   "description": "Automatic clusterization of the databases using the chosen scheme with pre-configured replication and auto-discovery of the nodes."
 }
