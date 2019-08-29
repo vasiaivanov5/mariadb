@@ -69,14 +69,18 @@
       },
       "is_proxysql": {
         "true": {
-          "extraNodesCount": 2
+          "extraNodesCount": 2,
+          "setGlobals": {
+            "proxyCount": 2
+          }
         }
       }
     }
   },
   "extraNodes": {
+    "nodeGroup": "proxysql",
     "nodeType": "proxysql",
-    "count": "${extraNodesCount}",
+    "count": "${globals.proxyCount:0}",
     "extip": 1
   },
   "description": "Automatic clusterization of the databases using the chosen scheme with pre-configured replication and auto-discovery of the nodes."
