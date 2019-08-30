@@ -81,7 +81,12 @@
     "nodeGroup": "proxysql",
     "nodeType": "proxysql",
     "count": "${globals.proxyCount:0}",
-    "extip": 1
+    "extip": 1,
+    "validation": {
+      "scalingMode": "STATELESS",
+      "minCount": 2,
+      "maxCount": 3
+    }
   },
   "description": "Automatic clusterization of the databases using the chosen scheme with pre-configured replication and auto-discovery of the nodes."
 }
