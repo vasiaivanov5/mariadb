@@ -58,13 +58,22 @@
     "rules": {
       "scheme": {
         "master": {
-          "minCount": 2
+          "minCount": 2,
+          "setGlobals": {
+            "proxyCountEx": 2
+          }
         },
         "slave": {
-          "minCount": 2
+          "minCount": 2,
+          "setGlobals": {
+            "proxyCountEx": 0
+          }
         },
         "galera": {
-          "minCount": 3
+          "minCount": 3,
+          "setGlobals": {
+            "proxyCountEx": 3
+          }
         }
       },
       "is_proxysql": {
@@ -77,16 +86,29 @@
       }
     }
   },
-  "extraNodes": {
-    "nodeGroup": "proxysql",
-    "nodeType": "proxysql",
-    "count": "${globals.proxyCount:0}",
-    "extip": 1,
-    "validation": {
-      "scalingMode": "STATELESS",
-      "minCount": 2,
-      "maxCount": 3
+  "extraNodes": [
+    {
+      "nodeGroup": "proxysql",
+      "nodeType": "proxysql",
+      "count": "${globals.proxyCount:0}",
+      "extip": 1,
+      "validation": {
+        "scalingMode": "STATELESS",
+        "minCount": 2,
+        "maxCount": 3
+      }
+    },
+    {
+      "nodeGroup": "proxysql-extra",
+      "nodeType": "proxysql",
+      "displayName": "Custom",
+      "mission": "sqldb",
+      "count": "${globals.proxyCountEx:0}",
+      "validation": {
+        "minCount": 1,
+        "maxCount": 4
+      }
     }
-  },
+  ],
   "description": "Automatic clusterization of the databases using the chosen scheme with pre-configured replication and auto-discovery of the nodes."
 }
