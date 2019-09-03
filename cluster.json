@@ -105,8 +105,8 @@
       "mission": "sqldb",
       "count": "${globals.proxyCountEx:0}",
       "validation": {
-        "minCount": 1,
-        "maxCount": 4
+        "minCount": "${globals.proxyCountEx}",
+        "maxCount": "${globals.proxyCountEx}"
       }
     }
   ],
