@@ -72,7 +72,8 @@
         "galera": {
           "minCount": 3,
           "setGlobals": {
-            "proxyCountEx": 3
+            "proxyCountEx": 3,
+            "proxyExMission": "cp"
           }
         }
       },
@@ -102,7 +103,7 @@
       "nodeGroup": "proxysql-extra",
       "nodeType": "proxysql",
       "displayName": "Custom",
-      "mission": "sqldb",
+      "mission": "${globals.proxyExMission:sqldb}",
       "count": "${globals.proxyCountEx:0}",
       "validation": {
         "minCount": "${globals.proxyCountEx}",
