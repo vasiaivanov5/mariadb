@@ -71,6 +71,7 @@
         },
         "galera": {
           "minCount": 3,
+          "minCloudlets": 16,
           "setGlobals": {
             "proxyCountEx": 3,
             "proxyExMission": "cp"
