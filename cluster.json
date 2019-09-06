@@ -64,13 +64,13 @@
           }
         },
         "slave": {
-          "minCount": 2,
+          "minCount": 3,
           "setGlobals": {
             "proxyCountEx": 0
           }
         },
         "galera": {
-          "minCount": 3,
+          "minCount": 4,
           "minCloudlets": 16,
           "setGlobals": {
             "proxyCountEx": 3,
