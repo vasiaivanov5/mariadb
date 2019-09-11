@@ -93,7 +93,7 @@
       "nodeGroup": "proxysql",
       "nodeType": "proxysql",
       "count": "${globals.proxyCount:0}",
-      "extip": 1,
+      "extip": 0,
       "validation": {
         "scalingMode": "STATELESS",
         "minCount": 2,
