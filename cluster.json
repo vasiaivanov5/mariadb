@@ -60,6 +60,7 @@
         "master": {
           "minCount": 2,
           "setGlobals": {
+            "recCloudlets": 16,
             "proxyCountEx": 2
           }
         },
@@ -87,6 +88,9 @@
         }
       }
     }
+  },
+  "recommended": {
+    "cloudlets": "${globals.recCloudlets}"
   },
   "extraNodes": [
     {
