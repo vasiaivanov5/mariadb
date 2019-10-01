@@ -67,7 +67,7 @@
         "slave": {
           "minCount": 3,
           "setGlobals": {
-            "recCloudlets": 16,
+            "recCloudlets": 17,
             "proxyCountEx": 0
           }
         },
