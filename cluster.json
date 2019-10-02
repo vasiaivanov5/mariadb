@@ -97,8 +97,10 @@
     {
       "nodeGroup": "vasia-mariadb",
       "nodeType": "vasia-mariadb",
-      "count": 1,
-      "tag": "${clusterNode.tag}"
+      "count": 1,      
+      "validation": {
+        "tag": "${clusterNode.tag}"
+      }      
     },    
     {
       "nodeGroup": "proxysql",
