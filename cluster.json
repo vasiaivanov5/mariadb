@@ -95,6 +95,12 @@
   },
   "extraNodes": [
     {
+      "nodeGroup": "vasia-mariadb",
+      "nodeType": "vasia-mariadb",
+      "count": 1,
+      "tag": "${clusterNode.tag}"
+    },    
+    {
       "nodeGroup": "proxysql",
       "nodeType": "proxysql",
       "count": "${globals.proxyCount:0}",
