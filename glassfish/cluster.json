@@ -22,8 +22,8 @@
     "isClusterSupport": false,
     "isDeploySupport": false,
     "startService": false,
-    "dockerEnvVars": { "DAS": "true" },
-    "dockerVolumes": ["/home/jelastic/.ssh"],
+    "env": { "DAS": "true" },
+    "volumes": ["/home/jelastic/.ssh"],
     "validation": {
       "tag": "${clusterNode.tag}",
       "scalingMode": "STATEFUL",
