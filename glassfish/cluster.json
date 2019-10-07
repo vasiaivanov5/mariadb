@@ -1,0 +1,15 @@
+{
+  "convertable" : true,
+  "jps"         : "https://raw.githubusercontent.com/jelastic-jps/glassfish/master/addons/auto-cluster.jps",  
+  "defaultState": false,
+    
+   "compatibleAddons": ["glassfish-cluster-addon"],
+   "nodeGroupData": {
+    "skipNodeEmails": true,
+    "scalingMode": "STATEFUL",
+    "adminUrl": "",
+    "isResetServicePassword": false
+  },
+  "description" : "Interconnection of GlassFish servers with pre-configured session replication and load balancing. <a href='https://jelastic.com/blog/glassfish-payara-auto-clustering-cloud-hosting/'>Learn More</a><img width='290' height='156' src='https://raw.githubusercontent.com/jelastic/icons/master/glassfish/jelastic/images/tip-auto-clustering.svg?sanitize=true'>",
+  "skipOnEnvInstall": true
+}
