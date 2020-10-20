@@ -18,8 +18,7 @@
   "extraNodes": {
     "nodeGroup": "das",
     "nodeType": "${clusterNode.nodeType}",
-    "fixedCloudlets": "${clusterNode.fixedCloudlets}",
-    "flexibleCloudlets": "${clusterNode.flexibleCloudlets}",
+    "cloudlets": "${clusterNode.flexibleCloudlets}",
     "displayName": "DAS",
     "count": 1,
     "isClusterSupport": false,
